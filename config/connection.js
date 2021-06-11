@@ -19,5 +19,5 @@ if (process.env.JAWSDB_URL) {
 }
 
 module.exports = sequelize;
-
+// change2
 //made a change
