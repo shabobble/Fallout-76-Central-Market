@@ -21,6 +21,10 @@ Armor.init(
         minorEffect: {
             type: DataTypes.STRING,
         },
+        armorType: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         capsValue: {
             type: DataTypes.INTEGER,
             allowNull: false,
