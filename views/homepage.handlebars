@@ -3,6 +3,7 @@
         <div class="col col-md-3 d-flex justify-content-center" id="vaultboy">
             <img src="/images/vaultboy.jpg" class="img-fluid w-50">
         </div>
+        {{#unless loggedIn}}
         <div class="col-md-5 text-light align-self-center">
             <div class="row align-items-center">
                 <a href="/login">
@@ -10,5 +11,6 @@
                 </a>
             </div>
         </div>
+        {{/unless}}
     </div>
 </div>
