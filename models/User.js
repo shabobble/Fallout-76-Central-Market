@@ -16,10 +16,6 @@ User.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         username: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -54,6 +50,12 @@ User.init(
                 updatedUserData.password = await bcrypt.hash(updatedUserData.password, 8);
                 return updatedUserData;
             },
+            beforeBulkCreate: async (users) => {
+                for (const user of users) {
+                    user.password = await bcrypt.hash(user.password, 8);
+                }
+                
+            }
         },
         sequelize,
         timestamps: false,

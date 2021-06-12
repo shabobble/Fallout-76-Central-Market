@@ -21,6 +21,10 @@ Weapon.init(
         minorEffect: {
             type: DataTypes.STRING,
         },
+        weaponType: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         capsValue: {
             type: DataTypes.INTEGER,
             allowNull: false,
