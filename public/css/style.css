@@ -9,18 +9,18 @@
         text-align: center;
       }
 
-.container {
+/* .container {
     position: relative;
-}
+} */
 
 #vaultboy {
-    position: absolute;
-    left: 0;
+    /* position: absolute;
+    left: 0; */
     width: 50vw;
 }
 
-.login {
+/* .login {
     position: absolute;
     right: 0;
     width: 50vw;
-}
+} */
