@@ -78,4 +78,23 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// POST /api/users
+router.post('/', (req, res) => {
+    User.create({
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password,
+      platform: req.body.platform
+    })
+    .then(userData => {
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.username = userData.username;
+        req.session.loggedIn = true;
+    
+        res.json(userData);
+      });
+    });
+  });
+
 module.exports = router;
