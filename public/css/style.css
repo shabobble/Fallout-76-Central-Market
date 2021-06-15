@@ -20,6 +20,10 @@
     color:black
 }
 
+html, body {
+    background-color: black
+}
+
 /* .container {
     position: relative;
 } */
