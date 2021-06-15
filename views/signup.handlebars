@@ -1,36 +1,44 @@
-<section class="sign-in-page">
-    <div class="form-heading">
-        <h1 class="text-light">Sign Up</h1>
-    </div>
-    <div class="form-section">
-        <form class="signup-form">
-            <div>
-                <label for="email-signup" class="text-light">Enter your e-mail address:</label>
-                <input type="email" class="entry-field" id="email-signup" />
-            </div>
-            <div>
-                <label for="username-signup" class="text-light">Select a username:</label>
-                <input type="text" class="entry-field" id="username-signup" />
-            </div>
-            <div>
-                <label for="password-signup" class="text-light">Select a password:</label>
-                <input type="password" class="entry-field" id="password-signup" />
-            </div>
-            <div>
-                <button type="submit" class="btn-success login-signup-btn">Sign Up!</button>
-            </div>
-            <div>
-                <label for="platform-signup">Choose your platform:</label>
-                <select id="platform-signup" name="Platform">
-                    <option value="XBox">XBox</option>
-                    <option value="Playstation">Playstation</option>
-                    <option value="PC">PC</option>
-                </select>
-            </div>
-        </form>
-    </div>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col col-md-3 d-flex justify-content-center" id="vaultboy">
+        <img src="/images/vaultboy.jpg" class="img-fluid w-50">
+      </div>
 
-    <a href="/login" class="login-link"><button type="button" class="btn-primary">Log in instead</button></a>
-</section>
+    <div class="col-md-5 text-light align-self-center">
+        <section class="sign-in-page">
+            <div class="form-heading">
+                <h1 class="text-light">Sign Up</h1>
+            </div>
+            <div class="form-section">
+                <form class="signup-form">
+                    <div>
+                        <label for="email-signup" class="text-light">Enter your e-mail address:</label>
+                        <input type="email" class="entry-field" id="email-signup" />
+                    </div>
+                    <div>
+                        <label for="username-signup" class="text-light">Select a username:</label>
+                        <input type="text" class="entry-field" id="username-signup" />
+                    </div>
+                    <div>
+                        <label for="password-signup" class="text-light">Select a password:</label>
+                        <input type="password" class="entry-field" id="password-signup" />
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-success login-signup-btn">Sign Up!</button>
+                    </div>
+                    <div>
+                        <label for="platform-signup">Choose your platform:</label>
+                        <select id="platform-signup" name="Platform">
+                            <option value="XBox">XBox</option>
+                            <option value="Playstation">Playstation</option>
+                            <option value="PC">PC</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <a href="/login" class="login-link"><button type="button" class="btn-primary">Log in instead</button></a>
+        </section>
+    </div>
+</div>
 
 <script src="/js/signup.js"></script>
