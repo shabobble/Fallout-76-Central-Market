@@ -1,0 +1,46 @@
+<table class="table table-light table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Main Effect</th>
+            <th scope="col">Major Effect</th>
+            <th scope="col">Minor Effect</th>
+            <th scope="col">Weapon Type</th>
+            <th scope="col">Caps Value</th>
+            <th scope="col">Username</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#if weapons.length}}
+            {{#each weapons as |weapon|}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{mainEffect}}</td>
+                    <td>{{majorEffect}}</td>
+                    <td>{{minorEffect}}</td>
+                    <td>{{weaponType}}</td>
+                    <td>{{capsValue}}</td>
+                    <td>{{user.username}}</td>
+                    <td><button type="button" class="deleteBtn" data-id={{weapon.id}}>Delete</button></td>
+                </tr>
+            {{/each}}
+        {{else}}
+            <h6 class="pb-4 has-text-centered is-italic">You do not currently have any weapons.</h6>
+        {{/if}}
+    </tbody>
+</table>
+
+{{!-- <script>
+    $(document).ready(function() {
+
+        $('.deleteBtn').on('click', function() {
+            let currentRow = $(this).closest('tr');
+            let col1 = currentRow.find('td:eq(0)').val();
+
+            (col1)
+        })
+    })
+
+</script> --}}
+<script src="/js/delete.js"></script>
