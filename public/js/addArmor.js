@@ -1,19 +1,19 @@
-async function weaponFormHandler(event) {
+async function armorFormHandler(event) {
     event.preventDefault();
 
     const mainEffect = document.getElementById('main-effect').value;
     const majorEffect = document.getElementById('major-effect').value;
     const minorEffect = document.getElementById('minor-effect').value;
-    const weaponType = document.getElementById('weapon-type').value;
+    const armorType = document.getElementById('armor-type').value;
     const capsValue = document.getElementById('caps-value').value;
 
-    const response = await fetch('/api/weapons', {
+    const response = await fetch('/api/armor', {
         method: 'POST',
         body: JSON.stringify({
             mainEffect,
             majorEffect,
             minorEffect,
-            weaponType,
+            armorType,
             capsValue
         }),
         headers: {
@@ -28,4 +28,4 @@ async function weaponFormHandler(event) {
     };
 };
 
-document.querySelector('.new-weapon-form').addEventListener('submit', weaponFormHandler);
+document.querySelector('.new-armor-form').addEventListener('submit', armorFormHandler);
