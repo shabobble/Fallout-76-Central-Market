@@ -1,20 +1,20 @@
-.login {
-        display: block;
-        width: 100%;
-        border: none;
-        background-color: #298fd3;
-        padding: 14px 28px;
-        font-size: 16px;
-        color: white;
-        cursor: pointer;
-        text-align: center;
-        box-shadow: 0 0 1px #ccc;
-        -webkit-transition-duration: 0.2s;
-        -webkit-transition-timing-function: linear;
-        box-shadow:0px 0 0 #31708f  inset;
+.login, .logout {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #298fd3;
+    padding: 14px 28px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 0 1px #ccc;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: linear;
+    box-shadow:0px 0 0 #31708f  inset;
 }
 
-.login:hover{
+.login:hover, .logout:hover{
     box-shadow:0 0 0 30px #e6b71f  inset;
     -webkit-transform: scale(1);
     color:black
@@ -34,8 +34,28 @@ html, body {
     width: 50vw;
 }
 
-/* .login {
-    position: absolute;
-    right: 0;
-    width: 50vw;
-} */
+.itemBtn {
+    background-color: #16bd1e;
+    padding: 14px 28px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 0 1px #ccc;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .spacer {
+        padding-top: 80px;
+        padding-bottom: 40px
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .itemBtn{
+        padding-top: 20px;
+    }
+
+}
