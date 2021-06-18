@@ -16,7 +16,7 @@ router.post('/', withAuth, (req, res) => {
         mainEffect: req.body.mainEffect,
         majorEffect: req.body.majorEffect,
         minorEffect: req.body.minorEffect,
-        weaponType: req.body.weaponType,
+        itemType: req.body.itemType,
         capsValue: req.body.capsValue,
         user_id: req.session.user_id
     })

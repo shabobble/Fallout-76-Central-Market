@@ -21,7 +21,7 @@ Armor.init(
         minorEffect: {
             type: DataTypes.STRING,
         },
-        armorType: {
+        itemType: {
             type: DataTypes.STRING,
             allowNull: false,
         },

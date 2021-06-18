@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
                 { mainEffect: { [sequelize.Op.like]: `%${terms}%`} },
                 { majorEffect: { [sequelize.Op.like]: `%${terms}%`} },
                 { minorEffect: { [sequelize.Op.like]: `%${terms}%`} },
-                { weaponType: { [sequelize.Op.like]: `%${terms}%`} },
+                { itemType: { [sequelize.Op.like]: `%${terms}%`} },
             ]
         }, 
         include: [
@@ -22,13 +22,13 @@ router.get('/', async (req, res) => {
         ]
     })
 
-    const armor = await Armor.findAll({
+    const armorData = await Armor.findAll({
         where: {
             [sequelize.Op.or]: [
                 { mainEffect: { [sequelize.Op.like]: `%${terms}%`} },
                 { majorEffect: { [sequelize.Op.like]: `%${terms}%`} },
                 { minorEffect: { [sequelize.Op.like]: `%${terms}%`} },
-                { armorType: { [sequelize.Op.like]: `%${terms}%`} },
+                { itemType: { [sequelize.Op.like]: `%${terms}%`} },
             ]
         },
         include: [
@@ -40,6 +40,7 @@ router.get('/', async (req, res) => {
     })
 
     const weapons = weaponData.map(weapon => weapon.get({ plain: true }));
+    const armor = armorData.map(armor => armor.get({ plain: true }));
 
     res.render('search', {
         weapons,

@@ -4,12 +4,10 @@ async function deleteItemHandler(event) {
     event.preventDefault();
     console.log('You clicked the delete button.');
     const id = event.target.getAttribute('data-id');
+    const type = event.target.getAttribute('data-type')
 
-    const response = await fetch(`/api/weapons/${id}`, {
+    const response = await fetch(`/api/${type}/${id}`, {
         method: 'DELETE',
-        body: JSON.stringify({
-            weapon_id: id
-        }),
         headers: {
             'Content-Type': 'application/json'
         }
