@@ -49,4 +49,5 @@ router.get('/view-edit', withAuth, (req, res) => {
         res.render('view-edit', { weapons, loggedIn: true, user_id: req.session.user_id})
     })
 })
+
 module.exports = router;
