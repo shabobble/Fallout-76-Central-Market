@@ -5,11 +5,11 @@
                     <img src="/images/vaultboy.jpg" class="img-fluid w-50 vaultboy">
                 </div>
                 <div class="col-md-5 text-light align-self-center animate__animated animate__fadeIn animate__fast">
-                    <h2 class="text-light text-center">Add New Armor</h2><hr>
+                    <h2 class="text-light text-center" >Add New Armor</h2><hr>
                     <div class="card bg-dark p-4">
 
 
-                        <form class="container new-armor-form text-light">
+                        <form class="container new-armor-form text-light" id="a-form">
                             <h4 class="text-center">Modifiers</h4><hr>                            
                             <div class="row pb-2">
                                 <label class="col-4" for="main-effect">Main Effect</label>
@@ -183,10 +183,10 @@
 
                             <div class="row justify-content-between pb-2">
                                 <label class="col-4" for="caps-value">Caps Value</label>
-                                <input class="col-4" type="number" id="caps-value" name="caps-value">
+                                <input class="col-4" type="number" id="caps-value" name="caps-value" min="1">
                             </div>
                             <div class="row justify-content-center">
-                                <button type="submit" class="col col-xl-3 btn-success mt-3 mx-3 rounded btn-lg">Add Armor</button>
+                                <button type="submit" class="col col-xl-3 itemBtn mt-3 mx-3 rounded btn-lg btn-outline-dark">Add Armor</button>
                             </div>
                         </form>
                     </div>
