@@ -4,7 +4,9 @@ const nodemailer = require("nodemailer");
 module.exports = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: testAccount.user, // generated ethereal user
-      pass: testAccount.pass, // generated ethereal password
+      user: 'vault76marketplace@gmail.com', // generated ethereal user
+      pass: 'appumrpfdtgrlgey', // generated ethereal password
     },
   });
+  
+  // xckseopouahnqeht

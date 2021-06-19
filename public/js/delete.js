@@ -2,7 +2,6 @@ const deleteButtons = document.querySelectorAll('.deleteBtn')
 
 async function deleteItemHandler(event) {
     event.preventDefault();
-    console.log('You clicked the delete button.');
     const id = event.target.getAttribute('data-id');
     const type = event.target.getAttribute('data-type')
 
@@ -14,7 +13,7 @@ async function deleteItemHandler(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/dashboard/view-edit');
+        document.location.replace('/inventory');
     } else {
         alert(response.statusText);
     }

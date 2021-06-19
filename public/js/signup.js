@@ -24,7 +24,9 @@ async function signupFormHandler(event) {
         document.location.replace('/dashboard');
       } else {
         const data = await response.json()
-        alert(data.errors[0]);
+        if (data.errors[0] === 'user.email must be unique') {
+          alert('That email is already in use.');
+        }
       }
     }
   }
