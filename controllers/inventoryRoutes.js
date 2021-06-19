@@ -22,7 +22,8 @@ router.get('/', withAuth, async (req, res) => {
                 model: User,
                 attributes: ['username']
             }
-        ]
+        ],
+        // order: ['weaponData.mainEffect', 'ASC']
     })
 
     const armorData = await Armor.findAll({
@@ -43,7 +44,8 @@ router.get('/', withAuth, async (req, res) => {
                 model: User,
                 attributes: ['username']
             }
-        ]
+        ],
+        // order: ['armorData.mainEffect', 'ASC']
     })
 
     const weapons = weaponData.map(weapon => weapon.get({ plain: true }));
