@@ -11,35 +11,36 @@ router.get('/', async (req, res) => {
                 { mainEffect: { [sequelize.Op.like]: `%${terms}%`} },
                 { majorEffect: { [sequelize.Op.like]: `%${terms}%`} },
                 { minorEffect: { [sequelize.Op.like]: `%${terms}%`} },
-                { weaponType: { [sequelize.Op.like]: `%${terms}%`} },
+                { itemType: { [sequelize.Op.like]: `%${terms}%`} },
             ]
         }, 
         include: [
             {
                 model: User,
-                attributes: ['username']
+                attributes: ['username', 'platform']
             }
         ]
     })
 
-    const armor = await Armor.findAll({
+    const armorData = await Armor.findAll({
         where: {
             [sequelize.Op.or]: [
                 { mainEffect: { [sequelize.Op.like]: `%${terms}%`} },
                 { majorEffect: { [sequelize.Op.like]: `%${terms}%`} },
                 { minorEffect: { [sequelize.Op.like]: `%${terms}%`} },
-                { armorType: { [sequelize.Op.like]: `%${terms}%`} },
+                { itemType: { [sequelize.Op.like]: `%${terms}%`} },
             ]
         },
         include: [
             {
                 model: User,
-                attributes: ['username']
+                attributes: ['username', 'platform']
             }
         ]
     })
 
     const weapons = weaponData.map(weapon => weapon.get({ plain: true }));
+    const armor = armorData.map(armor => armor.get({ plain: true }));
 
     res.render('search', {
         weapons,
@@ -47,4 +48,49 @@ router.get('/', async (req, res) => {
     })
 })
 
+router.get('/:username', async (req, res) => {
+        const user = await User.findOne({
+        where: {
+            username: req.params.username
+        },
+        attributes: ['id'],
+        include: [
+            {
+                model: Weapon,
+            },
+            {
+                model: Armor
+            }
+        ]
+    })
+
+    const weaponData = await Weapon.findAll({
+        where: {
+            user_id: user.id
+        },
+        include: [
+            {
+                model: User,
+                attributes: ['username', 'platform']
+            }
+        ]
+    })
+
+    const armorData = await Armor.findAll({
+        where: {
+            user_id: user.id
+        },
+        include: [
+            {
+                model: User,
+                atrributes: ['username', 'platform']
+            }
+        ]
+    })
+
+    const weapons = weaponData.map(weapon => weapon.get({ plain: true }));
+    const armor = armorData.map(armor => armor.get({ plain: true }));
+
+    res.render('userSearch', { weapons, armor })
+})
 module.exports = router;

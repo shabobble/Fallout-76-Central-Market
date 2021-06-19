@@ -1,11 +1,10 @@
 <table class="table table-light table-striped">
     <thead>
         <tr>
-            <th scope="col">ID</th>
             <th scope="col">Main Effect</th>
             <th scope="col">Major Effect</th>
             <th scope="col">Minor Effect</th>
-            <th scope="col">Weapon Type</th>
+            <th scope="col">Item Type</th>
             <th scope="col">Caps Value</th>
             <th scope="col">Username</th>
             <th scope="col"></th>
@@ -15,18 +14,32 @@
         {{#if weapons.length}}
             {{#each weapons as |weapon|}}
                 <tr>
-                    <td>{{id}}</td>
                     <td>{{mainEffect}}</td>
                     <td>{{majorEffect}}</td>
                     <td>{{minorEffect}}</td>
-                    <td>{{weaponType}}</td>
+                    <td>{{itemType}}</td>
                     <td>{{capsValue}}</td>
                     <td>{{user.username}}</td>
-                    <td><button type="button" class="deleteBtn" data-id={{weapon.id}}>Delete</button></td>
+                    <td><button type="button" class="deleteBtn" data-id={{id}} data-type="weapons">Delete</button></td>
                 </tr>
             {{/each}}
         {{else}}
             <h6 class="pb-4 has-text-centered is-italic">You do not currently have any weapons.</h6>
+        {{/if}}
+        {{#if armor.length}}
+            {{#each armor}}
+                <tr>
+                    <td>{{mainEffect}}</td>
+                    <td>{{majorEffect}}</td>
+                    <td>{{minorEffect}}</td>
+                    <td>{{itemType}}</td>
+                    <td>{{capsValue}}</td>
+                    <td>{{user.username}}</td>
+                    <td><button type="button" class="deleteBtn" data-id={{id}} data-type="armor">Delete</button></td>
+                </tr>
+            {{/each}}
+        {{else}}
+            <h6 class="pb-4 has-text-centered is-italic">You do not currently have any armor.</h6>
         {{/if}}
     </tbody>
 </table>

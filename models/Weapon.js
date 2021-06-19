@@ -21,7 +21,7 @@ Weapon.init(
         minorEffect: {
             type: DataTypes.STRING,
         },
-        weaponType: {
+        itemType: {
             type: DataTypes.STRING,
             allowNull: false,
         },

@@ -15,11 +15,11 @@
         {{#if weapons.length}}
             {{#each weapons as |weapon|}}
                 <tr>
-                    <td>{{mainEffect}}</td>
-                    <td>{{majorEffect}}</td>
-                    <td>{{minorEffect}}</td>
-                    <td>{{itemType}}</td>
-                    <td>{{capsValue}}</td>
+                    <td>{{weapon.mainEffect}}</td>
+                    <td>{{weapon.majorEffect}}</td>
+                    <td>{{weapon.minorEffect}}</td>
+                    <td>{{weapon.itemType}}</td>
+                    <td>{{weapon.capsValue}}</td>
                     <td>{{user.username}}</td>
                     <td>{{user.platform}}</td>
                     <td><button type="button" class="contactBtn" data-id={{id}} data-type="weapons">Contact Seller</button></td>
