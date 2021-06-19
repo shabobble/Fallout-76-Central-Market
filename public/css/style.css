@@ -68,26 +68,14 @@ html, body {
     font-family: 'Oxygen Mono', serif;
 }
 
-/* .container {
-    position: relative;
-} */
-
 #vaultboy {
-    /* position: absolute;
-    left: 0; */
+
     width: 50vw;
 }
 
 .itemBtn {
-    /* background-color: #16bd1e;
-    padding: 14px 28px;
-    font-size: 16px; */
-    /* color: white; */
     background-color: #e6b71f;
     cursor: pointer;
-    /* font-family: 'Overseer'; */
-    /* text-align: center;
-    box-shadow: 0 0 1px #ccc; */
     -webkit-transition-duration: 0.2s;
     -webkit-transition-timing-function: linear;
     box-shadow:0px 0 0 #000000  inset;
