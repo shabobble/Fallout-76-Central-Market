@@ -9,8 +9,8 @@
                 <div class="card bg-dark p-4">
                     
                     <form class="container new-weapon-form text-light">
-
-                        <div class="row">
+                        <h4 class="text-center">Modifiers</h4><hr>
+                        <div class="row pb-2">
                             <label class="col-4" for="main-effect">Main Effect</label>
                             <select class="col" id="main-effect" name="main-effect">
                                 <option val="antiArmor">Anti-Armor</option>
@@ -41,7 +41,7 @@
                             
 
 
-                        <div class="row">
+                        <div class="row pb-2">
                             <label class="col-4" for="major-effect">Major Effect</label>
                             <select class="col" id="major-effect" name="major-effect">
                                 <option disable selected value> -- Select a modifier: -- </option>
@@ -58,7 +58,7 @@
                             </select>
                         </div>
 
-                        <div class="row">
+                        <div class="row pb-2">
                             <label class="col-4" for="minor-effect">Minor Effect</label>
                             <select class="col" id="minor-effect" name="minor-effect">
                                 <option disable selected value> -- Select a modifier: -- </option>
@@ -77,8 +77,9 @@
                                 <option val="vatsEnhanced2">25% less V.A.T.S. Action Point cost</option>
                             </select>
                         </div>
+                        <h4 class="text-center pt-4">Weapon</h4><hr>
 
-                        <div class="row">
+                        <div class="row justify-content-between pb-2">
                             <label class="col-4" for="weapon-type">Weapon Type</label>
                             <select class="col-4 align-self-end" id="weapon-type" name="weapon-type">
                                 <option val="44mag">.44 Pistol</option>
@@ -187,18 +188,21 @@
                             </select>
                         </div>
 
-                        <div class="row">
+                        <div class="row justify-content-between pb-2">
                             <label class="col-4" for="caps-value">Caps Value</label>
                             <input class="col-4" type="number" id="caps-value" name="caps-value" min="1">
                         </div>
+                        <div class="row justify-content-center">
+                            <button type="submit" class="col col-xl-3 btn-success mt-3 mx-3 rounded btn-lg">Add Weapon</button>
+                        </div>
 
-                        <button type="submit" class="btn-success mt-3 mx-3 rounded">Add Weapon</button>
                     </form>
                 </div>
             </div>
             
            
         </div>
+    </div>
 </section>
 
     <script src="/js/addWeapon.js"></script>
