@@ -4,7 +4,7 @@ async function weaponFormHandler(event) {
     const mainEffect = document.getElementById('main-effect').value;
     const majorEffect = document.getElementById('major-effect').value;
     const minorEffect = document.getElementById('minor-effect').value;
-    const weaponType = document.getElementById('weapon-type').value;
+    const itemType = document.getElementById('weapon-type').value;
     const capsValue = document.getElementById('caps-value').value;
 
     const response = await fetch('/api/weapons', {
@@ -13,7 +13,7 @@ async function weaponFormHandler(event) {
             mainEffect,
             majorEffect,
             minorEffect,
-            weaponType,
+            itemType,
             capsValue
         }),
         headers: {

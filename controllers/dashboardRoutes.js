@@ -23,31 +23,4 @@ router.get('/add-armor', withAuth, (req, res) => {
     })
 })
 
-router.get('/view-edit', withAuth, (req, res) => {
-    Weapon.findAll({
-        where: {
-            user_id: req.session.user_id
-        },
-        attributes: [
-            'id',
-            'mainEffect',
-            'majorEffect',
-            'minorEffect',
-            'weaponType',
-            'capsValue',
-            'user_id'
-        ],
-        include: [
-            {
-                model: User,
-                attributes: ['username']
-            }
-        ]
-    })
-    .then(weaponData => {
-        const weapons = weaponData.map(weapon => weapon.get({ plain: true }));
-        res.render('view-edit', { weapons, loggedIn: true, user_id: req.session.user_id})
-    })
-})
-
 module.exports = router;

@@ -1,7 +1,7 @@
 function searchHandler(event) {
 
 if (event.keyCode == 13) {
-    const search = document.getElementById('searchBar').value;
+    const search = document.getElementById('itemSearchBar').value;
 
     document.location.replace('/search?terms=' + encodeURIComponent(search))
 }
@@ -9,4 +9,4 @@ if (event.keyCode == 13) {
 
 
 
-document.getElementById('searchBar').addEventListener('keydown', searchHandler)
+document.getElementById('itemSearchBar').addEventListener('keydown', searchHandler)

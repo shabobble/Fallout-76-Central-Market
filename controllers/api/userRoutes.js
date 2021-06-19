@@ -24,11 +24,9 @@ router.get('/:username', (req, res) => {
         include: [
             {
                 model: Weapon,
-                // attributes: ['id', 'mainEffect', 'majorEffect', 'minorEffect', 'weaponType', 'capsValue', 'created_at']
             },
             {
                 model: Armor,
-                // attributes: ['id', 'mainEffect', 'majorEffect', 'minorEffect', 'armorType', 'capsValue', 'created_at']
             }
         ]
     })
@@ -107,7 +105,30 @@ router.post('/', (req, res) => {
     
         res.json(userData);
       });
-    });
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json({ errors: err.errors.map(e => e.message) })
+    }) ;
   });
+
+router.delete('/:id', (req, res) => {
+    User.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(userData => {
+        if(!userData) {
+            res.status(404).json({ message: 'No user found with this id' })
+            return;
+        }
+        res.json(userData)
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 module.exports = router;

@@ -4,7 +4,7 @@ async function armorFormHandler(event) {
     const mainEffect = document.getElementById('main-effect').value;
     const majorEffect = document.getElementById('major-effect').value;
     const minorEffect = document.getElementById('minor-effect').value;
-    const armorType = document.getElementById('armor-type').value;
+    const itemType = document.getElementById('armor-type').value;
     const capsValue = document.getElementById('caps-value').value;
 
     const response = await fetch('/api/armor', {
@@ -13,7 +13,7 @@ async function armorFormHandler(event) {
             mainEffect,
             majorEffect,
             minorEffect,
-            armorType,
+            itemType,
             capsValue
         }),
         headers: {
