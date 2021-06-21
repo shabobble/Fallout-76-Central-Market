@@ -22,7 +22,7 @@
                     <td>{{weapon.capsValue}}</td>
                     <td>{{user.username}}</td>
                     <td>{{user.platform}}</td>
-                    <td><button type="button" class="contactBtn" data-id={{id}} data-type="weapons">Contact Seller</button></td>
+                    <td><button type="button" class="contactBtn" data-id={{id}} data-type="weapons" email={{user.email}} username={{user.username}}>Contact Seller</button></td>
                 </tr>
             {{/each}}
         {{else}}
@@ -38,7 +38,7 @@
                     <td>{{capsValue}}</td>
                     <td>{{user.username}}</td>
                     <td>{{user.platform}}</td>
-                    <td><button type="button" class="contactBtn" data-id={{id}} data-type="armor">Contact Seller</button></td>
+                    <td><button type="button" class="contactBtn" data-id={{id}} data-type="armor" email={{user.email}} username={{user.username}}>Contact Seller</button></td>
                 </tr>
             {{/each}}
         {{else}}
