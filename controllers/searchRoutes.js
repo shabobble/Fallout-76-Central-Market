@@ -19,6 +19,9 @@ router.get('/', async (req, res) => {
                 model: User,
                 attributes: ['username', 'platform']
             }
+        ],
+        order: [
+            ['mainEffect', 'ASC']
         ]
     })
 
@@ -36,10 +39,16 @@ router.get('/', async (req, res) => {
                 model: User,
                 attributes: ['username', 'platform']
             }
+        ],
+        order: [
+            ['mainEffect', 'ASC']
         ]
     })
 
-    const weapons = weaponData.map(weapon => weapon.get({ plain: true }));
+    const weapons = weaponData.map(weapon => {
+        //order/sort function
+        weapon.get({ plain: true })
+    });
     const armor = armorData.map(armor => armor.get({ plain: true }));
 
     res.render('search', {
@@ -73,6 +82,9 @@ router.get('/:username', async (req, res) => {
                 model: User,
                 attributes: ['username', 'platform']
             }
+        ],
+        order: [
+            ['mainEffect', 'ASC']
         ]
     })
 
@@ -85,6 +97,9 @@ router.get('/:username', async (req, res) => {
                 model: User,
                 atrributes: ['username', 'platform']
             }
+        ],
+        order: [
+            ['mainEffect', 'ASC']
         ]
     })
 
@@ -93,4 +108,5 @@ router.get('/:username', async (req, res) => {
 
     res.render('userSearch', { weapons, armor })
 })
+
 module.exports = router;
