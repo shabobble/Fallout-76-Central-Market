@@ -1,47 +1,62 @@
-# Fallout 76 CENTRAL MARKET
+# Fallout 76 Central Market
 
-## Our Task
+[![badge](https://img.shields.io/badge/license-MIT-green)](https://choosealicense.com/licenses/mit)
 
-The player vending machines don't currently have any way of tracking what havebeen sold to other players,so if you don't see the 2-second notification that you sold a weapon or armour you'll have no idea what has been sold.
-Players on the Reddit have been asking for something in-game to track it.
+Fallout 76 Central Market is an inventory management app for Fallout 76. It allows players to add legendary weapons and armor from their local vending machines to a searchable online database so that other players can find for weapons and armor they're looking for and contact the seller to arrange a trade.
 
+# Installation
 
+```bash
+npm install
+```
 
-## User Story
+# Usage
 
-As a gamer who wants to maintain the track of what weapons and armour are sold ,I want a web app to track and store it in a live database.
+1. Log in and/or sign up to create an account.
 
-## Acceptance Criteria
+2. Click on Add Armor if you are adding a new armor piece to your inventory or Add Weapon if you are adding a new weapon to your inventory.
 
-1. When I visit the site for the first time,then Iam presented with the homepage
+3. From the drop-down menus, choose the main effect (and major and minor effects if applicable) for the item you are selling, as well as the item type. 
 
-2. When I select the enter button Iam taken to the signup page,then Iam prompted to either sign-up or sign in.
+4. Enter the price you are seeking in the Caps Value field.
 
-3. When I choose to sign up,then I am prompted to create a username and password.
+5. Click Add Weapon/Add Armor to add the item to your database.
 
-4. When I click on the sign-up button,then my user credentials are saved and I am logged into the site. 
+6. Click Inventory to be taken to your inventory screen where you can click the Delete button to remove an item from your inventory.
 
-5. When I revisit the site at a later time and choose to sign in,then I am prompted to enter my username and password.
+7. Enter a search term in the "Search by item:" field to find a list of items matching your search term as well as the user who is selling that item.
 
-6. When I am signed in to the site,then I see navigation links for the homepage, the dashboard, and the option to log out.
+8. Enter a username in the "Search by user:" field to find a list of all items being sold by that user.
 
-7. When I click on the homepage option in the navigation,then I am taken to the homepage and presented with a page for adding new item and view or edit inventory.
+9. Click the Contact Seller button to automatically send an e-mail to the owner letting them know that you are interested in their item. 
 
-8. When we select the options there it will be taking to the dropdown where we can add a new weapon and armour and view or edit the inventory,then we click on the inventory Iam presented with the inventory details.
+10. Click Logout to be taken back to the homepage.
 
-9. When we search by item or search by user and hit enter,then Iam provided with the inventory detailsof either by user or by item which ever selected.
+## Screenshots
 
+![Demo GIF](/public/images/demo.gif)
 
-## Mock-Up
+## Video Demo
 
+* [Demo Video Recording of App](https://www.youtube.com/watch?v=eTC0gECi-Rk)
 
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Contact
+
+Patrick Sullivan - [@patksullivan](https://twitter.com/@patksullivan) - pksullivan@yahoo.com - [GitHub](https://github.com/shabobble)
+Joshua Figuereo - [GitHub](https://github.com/Jfig27)
+Swetha Reddivari - [GitHub](https://github.com/swethareddyl)
+
+* [Fallout 76 Central Market](https://github.com/shabobble/project-2-group-c)
+* [Heroku Deployed Application](https://fallout76centralmarket.herokuapp.com/)
 
 ## Credits
 
-## Heroku link
+Credit to our full-stack web development course being offered as a collaboration between Trilogy Education Services and UNH Professional Development and Training, and our instructor Benjamin Hutchins. [GitHub](https://github.com/benhutchins)
 
-https://fallout76centralmarket.herokuapp.com/
+## __License__ 
 
-## Github-Link
-
-
+ This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit).
