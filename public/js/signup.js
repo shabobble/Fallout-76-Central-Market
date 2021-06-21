@@ -27,6 +27,14 @@ async function signupFormHandler(event) {
         if (data.errors[0] === 'user.email must be unique') {
           alert('That email is already in use.');
         }
+
+        if (data.errors[0] === 'Validation isAlphanumeric on username failed') {
+          alert('Username may only contain alphanumeric characters.')
+        }
+
+        if (data.errors[0] === 'user.username must be unique') {
+          alert('That username is already in use.')
+        }
       }
     }
   }

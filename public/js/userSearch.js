@@ -4,9 +4,6 @@ function userSearchHandler(event) {
         const search = document.getElementById('userSearchBar').value;
     
         document.location.replace('/search/' + encodeURIComponent(search))
-    }
-    }
-    
-    
-    
+    }}
+
     document.getElementById('userSearchBar').addEventListener('keydown', userSearchHandler)
