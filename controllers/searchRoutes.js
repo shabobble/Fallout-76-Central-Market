@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ['username', 'platform']
+                attributes: ['username', 'platform', 'email']
             }
         ],
         order: [
@@ -37,7 +37,7 @@ router.get('/', async (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ['username', 'platform']
+                attributes: ['username', 'platform', 'email']
             }
         ],
         order: [
@@ -45,15 +45,14 @@ router.get('/', async (req, res) => {
         ]
     })
 
-    const weapons = weaponData.map(weapon => {
-        //order/sort function
-        weapon.get({ plain: true })
-    });
+    const weapons = weaponData.map(weapon =>weapon.get({ plain: true }));
     const armor = armorData.map(armor => armor.get({ plain: true }));
 
     res.render('search', {
         weapons,
-        armor
+        armor,
+        loggedIn: req.session.loggedIn,
+        username: req.session.username,
     })
 })
 
@@ -62,7 +61,7 @@ router.get('/:username', async (req, res) => {
         where: {
             username: req.params.username
         },
-        attributes: ['id'],
+        attributes: ['id', 'email'],
         include: [
             {
                 model: Weapon,
@@ -80,7 +79,7 @@ router.get('/:username', async (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ['username', 'platform']
+                attributes: ['username', 'platform', 'email']
             }
         ],
         order: [
@@ -95,7 +94,7 @@ router.get('/:username', async (req, res) => {
         include: [
             {
                 model: User,
-                atrributes: ['username', 'platform']
+                atrributes: ['username', 'platform', 'email']
             }
         ],
         order: [
@@ -106,7 +105,7 @@ router.get('/:username', async (req, res) => {
     const weapons = weaponData.map(weapon => weapon.get({ plain: true }));
     const armor = armorData.map(armor => armor.get({ plain: true }));
 
-    res.render('userSearch', { weapons, armor })
+    res.render('userSearch', { weapons, armor, loggedIn: req.session.loggedIn, username: req.session.username })
 })
 
 module.exports = router;

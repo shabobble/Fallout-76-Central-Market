@@ -58,7 +58,6 @@ router.post('/login', async (req, res) => {
         }
 
         const validPassword = await userData.checkPassword(req.body.password);
-        console.log(validPassword)
         if(!validPassword) {
             res.status(400).json({ message: 'Incorrect password!' })
             return;
@@ -68,6 +67,7 @@ router.post('/login', async (req, res) => {
             req.session.user_id = userData.id;
             req.session.username = userData.username;
             req.session.loggedIn = true;
+            req.session.email = userData.email
             res.json({ user: userData, message: 'You are now logged in!' })
         });
     } catch (err) {
@@ -102,6 +102,7 @@ router.post('/', (req, res) => {
         req.session.user_id = userData.id;
         req.session.username = userData.username;
         req.session.loggedIn = true;
+        req.session.email = userData.email
     
         res.json(userData);
       });

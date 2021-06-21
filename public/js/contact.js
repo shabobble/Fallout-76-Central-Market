@@ -2,15 +2,19 @@ const contactButtons = document.querySelectorAll('.contactBtn')
 
 async function contactItemHandler(event) {
     event.preventDefault();
-    console.log('You clicked the contact button.')
+    
     const id = event.target.getAttribute('data-id')
     const type = event.target.getAttribute('data-type')
+    const email = event.target.getAttribute('email')
+    const username = event.target.getAttribute('username')
 
-    const response = await fetch('api/contact', {
+    const response = await fetch('/api/contact', {
         method: 'POST',
         body: JSON.stringify({
             id,
-            type
+            type,
+            email,
+            username
         }),
         headers: {
             'Content-Type': 'application/json'
