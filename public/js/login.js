@@ -17,9 +17,13 @@ async function loginFormHandler(event) {
       if (response.ok) {
         document.location.replace('/dashboard#d-board');
       } else if (response.status === 400) {
+<<<<<<< HEAD
         alert('Your username or password is incorrect.');
       }
+=======
+        alert('Your email or password is incorrect.');
+>>>>>>> b16176d25444e2726970d544edb21a778bae6401
     }
   }
-  
+}
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
