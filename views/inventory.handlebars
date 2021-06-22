@@ -6,7 +6,7 @@
             <th scope="col">Minor Effect</th>
             <th scope="col">Item Type</th>
             <th scope="col">Caps Value</th>
-            <th scope="col">Username</th>
+            {{!-- <th scope="col">Username</th> --}}
             <th scope="col"></th>
         </tr>
     </thead>
@@ -19,7 +19,7 @@
                     <td>{{minorEffect}}</td>
                     <td>{{itemType}}</td>
                     <td>{{capsValue}}</td>
-                    <td>{{user.username}}</td>
+                    {{!-- <td>{{user.username}}</td> --}}
                     <td><button type="button" class="btn btn-sm btn-outline-warning deleteBtn" data-id={{id}} data-type="weapons">Delete</button></td>
                 </tr>
             {{/each}}
@@ -47,7 +47,7 @@
                     <td>{{minorEffect}}</td>
                     <td>{{itemType}}</td>
                     <td>{{capsValue}}</td>
-                    <td>{{user.username}}</td>
+                    {{!-- <td>{{user.username}}</td> --}}
                     <td><button type="button" class="btn btn-sm btn-outline-warning deleteBtn" data-id={{id}} data-type="armor">Delete</button></td>
                 </tr>
             {{/each}}
