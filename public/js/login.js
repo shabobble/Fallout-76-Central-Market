@@ -20,5 +20,5 @@ async function loginFormHandler(event) {
         alert('Your email or password is incorrect.');
     }
   }
-  
+}
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
